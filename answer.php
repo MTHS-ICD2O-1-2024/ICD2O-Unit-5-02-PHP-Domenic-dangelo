@@ -30,27 +30,29 @@
       <div class="right-image">
         <img src="./images/positive_negative.jpg" alt="positive and negative" />
       </div>
-      <p>Select what kind of number you would like.</p>
-      <br />
-      <form action="answer.php" method="GET">
-        <!-- Simple Textfield -->
-        <div class="mdl-textfield mdl-js-textfield">
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-positive">
-            <input type="radio" id="option-positive" class="mdl-radio__button" name="kind-of-number" value="1" checked>
-            <span class="mdl-radio__label">Positive</span>
-          </label>
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-negative">
-            <input type="radio" id="option-negative" class="mdl-radio__button" name="kind-of-number" value="2">
-            <span class="mdl-radio__label">Negative</span>
-          </label>
+      <div class="page-content-php">
+        <div id="user-info">
+          <?php
+          $inputOption1 = random_int(1, 6);
+          $inputOption2 = random_int(-1, -6);
+
+          //input
+          $userNumber = $_GET["guess"];
+          // process
+          if ($userNumber == $randomNumber) {
+            // output
+            echo "The number " . $userNumber . " was the correct number";
+          }
+          // process
+          if ($userNumber != $randomNumber) {
+            // output
+            echo "The number " . $userNumber . " is not the correct number. The correct number is " . $randomNumber;
+          }
+          ?>
+          <div class="page-content-answer">
+            <a href="./index.php">Return</a>
+          </div>
         </div>
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="submit">
-          Generate
-        </button>
-      </form>
     </main>
   </div>
 </body>
