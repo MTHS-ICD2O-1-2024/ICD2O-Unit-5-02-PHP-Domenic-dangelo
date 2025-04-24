@@ -36,11 +36,11 @@
         <!-- Simple Textfield -->
         <div class="mdl-textfield mdl-js-textfield">
           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-positive">
-            <input type="radio" id="option-positive" class="mdl-radio__button" name="kind-of-number" value="1" checked>
+            <input type="radio" id="option-positive" class="mdl-radio__button" name="kind-of-number" value="1" checked><!-- Positive -->
             <span class="mdl-radio__label">Positive</span>
           </label>
           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-negative">
-            <input type="radio" id="option-negative" class="mdl-radio__button" name="kind-of-number" value="2">
+            <input type="radio" id="option-negative" class="mdl-radio__button" name="kind-of-number" value="2"><!-- Negative -->
             <span class="mdl-radio__label">Negative</span>
           </label>
         </div>

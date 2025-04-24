@@ -34,19 +34,17 @@
         <div id="user-info">
           <?php
           $inputOption1 = random_int(1, 6);
-          $inputOption2 = random_int(-1, -6);
+          $inputOption2 = random_int(-6,-1);
 
           //input
-          $userNumber = $_GET["guess"];
-          // process
-          if ($userNumber == $randomNumber) {
-            // output
-            echo "The number " . $userNumber . " was the correct number";
+          if (isset($_GET["kind-of-number"])) {
+            $userInput = $_GET["kind-of-number"];
           }
-          // process
-          if ($userNumber != $randomNumber) {
-            // output
-            echo "The number " . $userNumber . " is not the correct number. The correct number is " . $randomNumber;
+          if ($userInput === "1") {
+            echo "<p>The random positive number is: $inputOption1</p>";
+          } 
+          else {
+            echo "<p>The random negative number is: $inputOption2</p>";
           }
           ?>
           <div class="page-content-answer">
