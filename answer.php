@@ -37,9 +37,8 @@
           $inputOption2 = random_int(-6,-1);
 
           //input
-          if (isset($_GET["kind-of-number"])) {
-            $userInput = $_GET["kind-of-number"];
-          }
+          $userInput = $_GET["kind-of-number"];
+
           if ($userInput === "1") {
             echo "<p>The random positive number is: $inputOption1</p>";
           } 
